@@ -17,7 +17,6 @@ $(".bar_btn a").on('click', function(e) {
 //      speed: 800
 //  });
 
-// '.bar_btn a[href*="#"]'
 
 // 햄버거 메뉴 설정 영역 시작
 // Select DOM Items
