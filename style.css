@@ -34,7 +34,7 @@ body {
 }
 /* 로고 부분 */
 
-/* 햄버거 메뉴 부분 */
+/* 햄버거 메뉴 부분 - 수정 필요함*/
 .header-wrap .h_btn{
     padding-right: 3%;
 }
@@ -56,46 +56,46 @@ body {
     transition: transform 1s, opacity 1s, background-color 3.8s 0.3s;
 }
 /* 헤더 설정 끝  */
-/* 사이드메뉴 설정 시작 */
-.navbar {
+/* 클릭버튼 설정 시작 */
+.bar_btn {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1;
     display: flex;
-    width: 320px;
-    width: 0;
+    width: 100px;
+    /* width: 0; */
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
+    /* background: rgba(0, 0, 0, 0.7); */
 }
-.navbar ul {
+.bar_btn ul {
     display: flex;
     list-style: none;
     width: 100%;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
-.navbar ul li {
+.bar_btn ul li {
     margin: 0 1rem;
     padding: 1rem;
-    /* text-align: right;  */
 }
-.navbar ul li a {
+.bar_btn ul li a {
     text-decoration: none;      
     text-transform: uppercase;
-    color: #f4f4f4;
+    color: rgba(0,0,0,0.8);
+
+    padding: 20px;
 }
-.navbar ul li a:hover {
+.bar_btn ul li a:hover {
     color: skyblue;
 }
 /* 사이드메뉴 설정 끝 */
 /* 섹션 설정 시작 */
 section {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
-    /*text-align: center; */
     width: 100%;
     height: 100vh;
     scroll-snap-align: center;
@@ -250,11 +250,11 @@ section#content .three .text_box p{
 }
 /*  4번 섹션: 메뉴: 왼쪽에 음식메뉴 총 4개, 오른쪽에 전체 사진 */
 section#menu {
-    background : url('images/') no-repeat center center/cover;
+    background : url('images/sample/section004.jpg') no-repeat center center/cover;
 }
 /*  5번 섹션: SNS: 인스트 사진 4장, 인스타연결, 하단에 푸터 */
 section#sns {
-    background : url('images/') no-repeat center center/cover;
+    background : url('images/sample/section005.jpg') no-repeat center center/cover;
 }
 
 /* 폰트 설정 */
