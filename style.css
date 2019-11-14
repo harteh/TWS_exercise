@@ -1,98 +1,261 @@
 * {
     margin: 0; 
     padding: 0;
+    text-decoration: none;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #333;
+    /* background: #333; */
     color: #fff;
-/*    line-height: 1.6;*/
+    line-height: 1.6;
     height: 100vh;
-/*    height: 100%;*/
     overflow: hidden;
 }
 
 .container {
     width: 100%;
-    height: 100vh;
-/*    height: 100%;*/
+    height: 100%;    
     /* CSS Smooth Scroll  */
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    /* CSS Smooth Scroll  */
+    position: relative;
 }
-/*네비영역*/
-/* 
+/* 헤더 설정 시작  */
+.header-wrap{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 25px;
+}
+/* 로고 부분 */
+
+/* 햄버거 메뉴 부분 */
+.header-wrap .h_btn{
+    padding-right: 3%;
+}
+#menu-btn{
+    display: none;
+}
+#menu-btn + label{
+    color: #000;
+    z-index: 2;
+    transition: margin 1s 1s;
+}
+#menu-btn + label .btn-line{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #000;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 1s, opacity 1s, background-color 3.8s 0.3s;
+}
+/* 헤더 설정 끝  */
+/* 사이드메뉴 설정 시작 */
 .navbar {
     position: fixed;
     top: 0;
+    right: 0;
     z-index: 1;
     display: flex;
-    width: 100%;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.05);
+    width: 320px;
+    width: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
 }
-
 .navbar ul {
     display: flex;
     list-style: none;
     width: 100%;
     justify-content: center;
+    flex-direction: column;
 }
-
 .navbar ul li {
     margin: 0 1rem;
     padding: 1rem;
+    /* text-align: right;  */
 }
-
 .navbar ul li a {
     text-decoration: none;      
     text-transform: uppercase;
-    color: #000;
+    color: #f4f4f4;
 }
-
 .navbar ul li a:hover {
     color: skyblue;
 }
-*/
-
+/* 사이드메뉴 설정 끝 */
+/* 섹션 설정 시작 */
 section {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
-    text-align: center;
+    /*text-align: center; */
     width: 100%;
     height: 100vh;
-/*    height: 100%;*/
     scroll-snap-align: center;
 }
-
 section h1 {
     font-size: 4rem;
 }
-
+section h2 {
+    font-size: 1.6rem;
+}
+section h3,
 section p {
     font-size: 1.5rem;
 }
 
-/* Section Images */
-section#home {
-    background : url('images/section001.jpg') no-repeat center center/ cover;    
+/* 섹션별 설정 */
+/*  1번 섹션: 메인: 왼쪽 텍스트, 오른쪽 유뷰트 광고영상 */
+section#main { 
+    flex-direction: row;
+    justify-content: space-between;
+} 
+section#main .m_txt{
+    width: 28%;
+    height: 65%;
+    font-family: 'S-CoreDream-6Bold';
+    background-color: #a3041a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+section#main .m_txt h2{
+    margin-right: 20px;
+}
+section#main .m_youtube{
+    width: 70%;
+    height: 65%;
+}
+/* 2번 섹션: 브랜드스토리: 화면중간 이미지, 이미지 상에 텍스트 */
+section#brand .b_pic{
+    width: 100%;
+    height: 500px;
+    background : url('images/section002_bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#brand .b_txt{
+    width: 60%;
+    height: 70%;
+    border: 1px solid #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+}
+section#brand .b_txt a{
+    color: #fff;
+    height: 40px; 
+    width: 250px;   
+    margin-top: 5%;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+section#brand .b_txt a:hover{
+    font-weight: bold;
+}
+/*  3번 섹션: 컨텐츠: 화면 중간에 6개 박스 */
+section#content {
+    background : url('images/section003_bg.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+section#content .content_wrap{
+    width: 1220px;
+    height: 820px;
+    font-size: 0;
+}
+section#content h2{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.6rem;
+}
+section#content .content_pic{
+    width: 100%;
+    height: 720px;
+    display: flex;
 }
 
-section#about {
-    background : url('images/section002.jpg') no-repeat center center/ cover;    
+section#content .one{
+    width: 500px;
+    height: 720px;
+    background: url(images/section003_content01.jpg) no-repeat;
+}
+section#content .two{
+    width: 330px;
+    height: 720px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+section#content .text_box{
+    background-color: rgba(255,255,255,0.08);    
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+section#content .text_box p{
+    font-size: 1.5rem;
+    color: #fff;
+}
+section#content .text_box a{
+    display: inline-block;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    width: 80px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+}
+section#content .two .two_pic{
+    height: 270px;
+    background: url(images/section003_content02.jpg) no-repeat;
+}
+section#content .two .text_box{
+    height: 450px;
+}
+section#content .three{    
+    width: 370px;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+}
+section#content .three .three_pic_t{
+    height: 250px;
+    background: url(images/section003_content03.jpg) no-repeat;
+}
+section#content .three .three_pic_b{
+    height: 330px;
+    background: url(images/section003_content04.jpg) no-repeat;
+}
+section#content .three .text_box{
+    height: 140px;
+}
+section#content .three .text_box p{
+    font-size: 1rem;
+}
+/*  4번 섹션: 메뉴: 왼쪽에 음식메뉴 총 4개, 오른쪽에 전체 사진 */
+section#menu {
+    background : url('images/') no-repeat center center/cover;
+}
+/*  5번 섹션: SNS: 인스트 사진 4장, 인스타연결, 하단에 푸터 */
+section#sns {
+    background : url('images/') no-repeat center center/cover;
 }
 
-section#service {
-    background : url('images/section003.jpg') no-repeat  center center /cover;    
-}
-
-section#contact {
-    background : url('images/section004.jpg') no-repeat  center center/ cover;    
-}
-section#footer {
-    background : url('images/section005.jpg') no-repeat center center/cover;    
-}
+/* 폰트 설정 */
+@font-face { font-family: 'S-CoreDream-6Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }

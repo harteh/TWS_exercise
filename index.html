@@ -6,51 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     
-    <title>Smooth Scroll Landing Page</title>
+    <title>투썸플레이스 리뉴얼 제작중</title>
 </head>
 <body>
     <div class="container">
-<!--    네비영역-->
-<!--
+        <!-- 헤더 설정 -->
+        <header>
+            <div class="header-wrap">
+                <div class="logo">
+                    <img src="images/TWS_logo.png" alt="검정로고">
+                </div>
+                <div class="h_btn">
+                        <input type="checkbox" id="menu-btn">
+                        <label for="menu-btn">
+                            <span class="btn-line"></span>
+                            <span class="btn-line"></span>
+                            <span class="btn-line"></span>
+                        </label>
+                </div>
+            </div>
+        </header>
+        <!-- 사이드 메뉴 설정 -->
         <nav class="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#footer">footer</a></li>
+                <li><a href="#">Brand Story</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Twosome App</a></li>
+                <li><a href="#">Event & Joy</a></li>
+                <li><a href="#">Franchise</a></li>
             </ul>
         </nav>
--->
-        <section id="home">
-<!--
-            <h1>Welcome To My Site</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quidem consequuntur explicabo doloribus modi et.</p>
--->
+        <!-- 섹션설정  -->
+        <!-- 1번 섹션: 메인: 왼쪽 텍스트, 오른쪽 유뷰트 광고영상 -->
+        <section id="main">
+            <div class="m_txt">
+                <h2>매일 다르게, 특별하게, 새롭게</h2>
+                <h2>오늘은 블랙 그라운드</h2>
+                <h2>나의 오늘을 커피하다</h2>
+                <h2>투썸플레이스</h2>
+            </div>
+            <div class="m_youtube">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e0rNfI2jnvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
-        <section id="about">
-<!--
-            <h1>Welcome To My Site</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quidem consequuntur explicabo doloribus modi et.</p>
--->
+        <!-- 2번 섹션: 브랜드스토리: 화면중간 이미지, 이미지 상에 텍스트 -->
+        <section id="brand">
+            <div class="b_pic">
+                <div class="b_txt">
+                    <h3>SMALL INDULGENCE</h3>
+                    <p>섬세하게 정성껏 내린 커피와 그에 어울리는 프리미엄 디저트의 조화</p>
+                    <p>나만의 즐거움을 만날 수 있는 프리미엄 디저트 카페</p>
+                    <a href="#">BRAND STORY</a>
+                </div>
+            </div>
         </section>
-        <section id="service">
-<!--
-            <h1>Welcome To My Site</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quidem consequuntur explicabo doloribus modi et.</p>
--->
+        <!-- 3번 섹션: 컨텐츠: 화면 중간에 6개 박스 -->
+        <section id="content">
+            <div class="content_wrap">
+                <h2>CONTENT</h2>
+                <div class="content_pic">
+                    <div class="one"></div>
+                    <div class="two">
+                        <div class="text_box">
+                            <p>CJ푸드빌이 강추한</p>
+                            <p>'투썸플레이스' 명소 5곳</p>
+                            <a href="#">More</a>
+                        </div>
+                        <div class="two_pic"></div>
+                    </div>
+                    <div class="three">
+                        <div class="three_pic_t"></div>
+                        <div class="three_pic_b"></div>
+                        <div class="text_box">
+                            <p>투썸의 <span>특별한 겨울 음료</span>를</p>
+                            <p>즐겨보세요</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-<!--
+        <!-- 4번 섹션: 메뉴: 왼쪽에 음식메뉴 총 4개, 오른쪽에 전체 사진 -->
+        <section id="menu">
             <h1>Welcome To My Site</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quidem consequuntur explicabo doloribus modi et.</p>
--->
         </section>
-        <section id="footer">
-<!--
+        <!-- 5번 섹션: SNS: 인스트 사진 4장, 인스타연결, 하단에 푸터 -->
+        <section id="sns">
             <h1>Welcome To My Site</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quidem consequuntur explicabo doloribus modi et.</p>
--->
         </section>
 
     </div>
@@ -58,7 +101,7 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-<!--  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
