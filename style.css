@@ -81,7 +81,12 @@ header{
     background: rgba(0,0,0,0.8);
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-out; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .menu-nav.show {
     transform: translate3d(0, 0, 0); }
 .menu .nav-item {
