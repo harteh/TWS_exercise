@@ -352,8 +352,9 @@ section#food .f_right{
 }
 /*  5번 섹션: SNS: 인스트 사진 4장, 인스타연결, 하단에 푸터 */
 section#sns{
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 section#sns h2{
