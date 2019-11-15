@@ -385,28 +385,67 @@ section#sns{
     justify-content: flex-end;
 }
 section#sns .sns_top{
-    width: 1580px;
-    height: 750px;
+/*    width: 1580px;*/
+    width: 85%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 section#sns .sns_top h2{
     text-align: center;
     text-transform: uppercase;
 }
 section#sns .sns_top .s_logo{
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
+    position: relative;
+    margin: 20px 0 20px 35px;
 }
 section#sns .sns_top .s_logo img{
-    margin-right: 20px;
+    position: absolute;
+    left: -40px;
+    top: -2px;
 }
 section#sns .footer{
     width: 100%;
-    height: 200px;
-    background-color: #333;
+    height: 20%;
+    background-color: #56565a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+/*    align-items: flex-start;*/
+}
+section#sns .footer ul{
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20px;
+}
+section#sns .footer .bottom{
+    padding-bottom: 20px;
+}
+section#sns .footer a{
+    font-size: 0.9rem;
+    color: #333;
+}
+section#sns .footer ul li{    
+    position: relative;
+    padding: 0 10px ;
+}
+section#sns .footer ul li:not(:last-child)::after{
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: #444;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -2px;
+}
+section#sns .footer ul:nth-child(1) li:nth-child(3) a{
+    color: #ffd662;
+    font-weight: bold;
 }
 /* 폰트 설정 */
 @font-face { font-family: 'S-CoreDream-6Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
