@@ -220,6 +220,7 @@ section#main .m_youtube {
     width: 70%;
     height: 65%;
     overflow: hidden;
+    z-index: -1;
 }
 
 section#main .m_youtube video {
