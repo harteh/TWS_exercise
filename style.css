@@ -129,8 +129,6 @@ header {
 }
 
 .menu .nav-item {
-    /* transform: translate3d(600px, 0, 0); */
-    /* transition: all 0.5s ease-out; */
     display: flex;
     flex-direction: column;
     height: 55%;
@@ -452,7 +450,6 @@ section#food .f_left h3 {
 
 section#food .f_left p {
     font-size: 1rem;
-    padding-left: 10px;
 }
 
 section#food .f_left .f_left_wrap .f_l_top {
@@ -469,33 +466,42 @@ section#food .f_left .f_left_wrap .f_l_bottom {
     align-items: flex-end;
     cursor: pointer;
 }
+section#food .f_left .f_left_wrap .f_l_bottom .food_box_wrap{
+    width: 200px;
+    height: 290px;
+}
 
 section#food .f_left .f_left_wrap .f_l_bottom .food_box {
     width: 200px;
-    height: 290px;
+    height: 220px;
     overflow: hidden;
-    position: relative;
-
+}
+section#food .f_left .f_left_wrap .f_l_bottom .food_box_wrap:nth-child(1) .food_box{
+    background: url("images/section004_content02.jpg") no-repeat;
+}
+section#food .f_left .f_left_wrap .f_l_bottom .food_box_wrap:nth-child(2) .food_box{
+    background: url("images/section004_content03.jpg") no-repeat;
+}
+section#food .f_left .f_left_wrap .f_l_bottom .food_box_wrap:nth-child(3) .food_box{
+    background: url("images/section004_content04.jpg") no-repeat;
 }
 
 section#food .f_left .f_left_wrap .f_l_bottom .food_box .hidden {
-    position: absolute;
-    width: 94.5%;
-    height: 65%;
+    width: 100%;
+    height: 200px;
     font-size: 0.8rem;
     font-weight: bold;
     line-height: 30px;
-    padding-top: 10px;
     background-color: rgba(255, 255, 255, 0.4);
-    top: 0;
-    left: -210px;
+    opacity: 0;
     transition: all 0.5s;
 }
 
 section#food .f_left .f_left_wrap .f_l_bottom .food_box:nth-child(1):hover .hidden,
 section#food .f_left .f_left_wrap .f_l_bottom .food_box:nth-child(2):hover .hidden,
 section#food .f_left .f_left_wrap .f_l_bottom .food_box:nth-child(3):hover .hidden {
-    left: 0%;
+    /* left: 0%; */
+    opacity: 1;
 }
 
 /* 오른쪽 풀 사이즈 사진 */
@@ -513,9 +519,7 @@ section#sns {
 }
 
 section#sns .sns_top {
-    /*    width: 1580px;*/
-    width: 85%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -528,24 +532,36 @@ section#sns .sns_top h2 {
 }
 
 section#sns .sns_top .s_logo {
-    position: relative;
     margin: 20px 0 20px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section#sns .sns_top .s_logo img {
-    position: absolute;
-    left: -40px;
-    top: -2px;
+    margin-right: 10px;
 }
 
 section#sns .sns_top .sns_pic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+section#sns .sns_top .sns_pic .pic_box{
+    width: 400px;
     height: 400px;
 }
-
-section#sns .sns_top .sns_pic img:hover {
-    border: 10px solid #56565a;
-    box-sizing: border-box;
-    transition: all 0.2s;
+section#sns .sns_top .sns_pic .pic_box:nth-child(1){
+    background: url("images/section005_content01.jpg") no-repeat;
+}
+section#sns .sns_top .sns_pic .pic_box:nth-child(2){
+    background: url("images/section005_content02.jpg") no-repeat;
+}
+section#sns .sns_top .sns_pic .pic_box:nth-child(3){
+    background: url("images/section005_content03.jpg") no-repeat;
+}
+section#sns .sns_top .sns_pic .pic_box:nth-child(4){
+    background: url("images/section005_content04.jpg") no-repeat;
 }
 
 section#sns .footer {
@@ -572,22 +588,12 @@ section#sns .footer .bottom {
 section#sns .footer a {
     font-size: 0.9rem;
     color: #333;
+    margin-right: 10px;
 }
 
 section#sns .footer ul li {
-    position: relative;
     padding: 0 10px;
-}
-
-section#sns .footer ul li:not(:last-child)::after {
-    content: "";
-    width: 1px;
-    height: 15px;
-    background-color: #444;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -2px;
+    color: #333;
 }
 
 section#sns .footer ul:nth-child(1) li:nth-child(3) a {
