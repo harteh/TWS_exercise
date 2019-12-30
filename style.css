@@ -23,21 +23,55 @@ body {
     /* CSS Smooth Scroll  */
     position: relative;
 }
+/* 어사이드 설정  */
+aside{
+    position: fixed;
+    width: 115px;
+    height: 30px;
+    right: 45px;
+    bottom: 40px;
+    cursor: pointer;    
+}
+aside span.txt{
+    display: inline-block;
+    width: 80px;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;    
+    transform: translateY(-30%);
+    color: #000;
+}
+aside span.a-icon{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    /* background: url(images/mousedown-200.png) no-repeat 100%/cover; */
+}
+aside span.a-icon img{
+    width: 100%;
+    height: 100%;
+    transform: translateY(-10%);
+    animation: ex-scroll 2s infinite linear;
+}
+@keyframes ex-scroll{
+    0%{transform: translateY(0);}
+    25%{transform: translateY(-5px);}
+    50%{transform: translateY(-10px);}
+    75%{transform: translateY(-5px);}
+    100%{transform: translateY(0);}
+}
 
 /* 헤더 설정 시작  */
 header {
     position: relative;
 }
-
 .header-wrap {
     width: 100%;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
     position: fixed;
-    /* top: 25px;    */
+    display: flex;
 }
-
 /* 로고 부분 */
 .logo {
     width: 300px;
@@ -58,7 +92,23 @@ header {
     font-weight: bold;
     font-size: 1.3rem;
 }
-
+/* 메인 내비게이션 부분 */
+.main-nav{
+    width: 600px;
+    margin-left: 2%;
+}
+.main-nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-nav ul li{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
 /* 햄버거 메뉴 부분 - 수정 필요함*/
 .menu-btn {
     position: absolute;
@@ -168,9 +218,6 @@ header {
 .menu .nav-item .submenu ul li a:hover {
     color: rgba(255, 255, 255, 0.4);
 }
-
-/* 헤더 설정 끝  */
-
 /* 섹션 설정 시작 */
 section {
     display: flex;
@@ -509,7 +556,14 @@ section#food .f_left .f_left_wrap .f_l_bottom .food_box:nth-child(3):hover .hidd
 section#food .f_right {
     width: 50%;
     height: 100vh;
-    background: url('images/section004_content05.jpg') no-repeat;
+}
+section#food .f_right .f_right-wrap{
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+    background: url('images/section004_content05.jpg') no-repeat right/contain;
+    margin-top: 5%;
+    box-shadow: 10px 10px 10px #e6e6e6;
 }
 
 /*  5번 섹션: SNS: 인스트 사진 4장, 인스타연결, 하단에 푸터 */
@@ -553,18 +607,16 @@ section#sns .sns_top .sns_pic {
 section#sns .sns_top .sns_pic .pic_box{
     width: 400px;
     height: 400px;
+    overflow: hidden;
+    cursor: pointer;
 }
-section#sns .sns_top .sns_pic .pic_box:nth-child(1){
-    background: url("images/section005_content01.jpg") no-repeat center/contain;
+section#sns .sns_top .sns_pic .pic_box img{
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-out;
 }
-section#sns .sns_top .sns_pic .pic_box:nth-child(2){
-    background: url("images/section005_content02.jpg") no-repeat center/contain;
-}
-section#sns .sns_top .sns_pic .pic_box:nth-child(3){
-    background: url("images/section005_content03.jpg") no-repeat center/contain;
-}
-section#sns .sns_top .sns_pic .pic_box:nth-child(4){
-    background: url("images/section005_content04.jpg") no-repeat center/contain;
+section#sns .sns_top .sns_pic .pic_box:hover img{
+    transform: scale(1.1);
 }
 
 section#sns .footer {

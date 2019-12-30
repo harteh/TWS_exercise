@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-    <title>투썸플레이스 리뉴얼 제작중</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">    
+    <title>투썸플레이스 리뉴얼</title>
 </head>
 
 <body>
@@ -17,8 +16,19 @@
         <header>
             <div class="header-wrap">
                 <div class="logo">
-                    <p>a twosome place</p>
-                    <p>coffee & dessert</p>
+                    <a href="#main">
+                        <p>a twosome place</p>
+                        <p>coffee & dessert</p>
+                    </a>
+                </div>
+                <div class="main-nav">
+                    <ul>
+                        <li><a href="#main">Home</a></li>
+                        <li><a href="#brand">Brand story</a></li>
+                        <li><a href="#content">Stories and News</a></li>
+                        <li><a href="#food">Beverages</a></li>
+                        <li><a href="#sns">#SNS</a></li>
+                    </ul>
                 </div>
                 <div class="menu-btn">
                     <div class="btn-line"></div>
@@ -29,7 +39,7 @@
                 <nav class="menu">
                     <ul class="menu-nav">
                         <li class="nav-item ">
-                            <a href="#main" class="nav-link">Brand Story</a>
+                            <a href="#brand" class="nav-link">Brand Story</a>
                             <div class="submenu">
                                 <ul>
                                     <li><a href="#">브랜드이야기</a></li>
@@ -40,7 +50,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#brand" class="nav-link">Menu</a>
+                            <a href="#food" class="nav-link">Menu</a>
                             <div class="submenu">
                                 <ul>
                                     <li><a href="#">NEW</a></li>
@@ -50,10 +60,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#content" class="nav-link">Twosome App</a>
+                            <a href="#main" class="nav-link">Twosome App</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#food" class="nav-link">Event & Joy</a>
+                            <a href="#content" class="nav-link">Event & Joy</a>
                             <div class="submenu">
                                 <ul>
                                     <li><a href="#">이벤트</a></li>
@@ -76,13 +86,18 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">매장찾기</a>
+                            <a href="#main" class="nav-link">매장찾기</a>
                         </li>
                     </ul>
                 </nav>
                 <!-- 서브메뉴 영역 끝 -->
             </div>
         </header>
+        <!-- 어사이드 설정 -->
+        <aside>
+            <span class="txt">scroll down</span>
+            <span class="a-icon"><img src="images/mousedown-200.png" alt="마우스다운"></span>
+        </aside>
         <!-- 섹션설정  -->
         <!-- 1번 섹션: 메인: 왼쪽 텍스트, 오른쪽 유뷰트 광고영상 -->
         <section id="main">
@@ -93,8 +108,7 @@
                 <h2>투썸플레이스</h2>
             </div>
             <div class="m_youtube">
-                <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2qvQoa0ZOBs?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                <video src="video/twsAroma.mp4" autoplay loop muted></video>
+                <video src="video/twsAroma.mp4" loop autoplay muted></video>
             </div>
         </section>
         <!-- 2번 섹션: 브랜드스토리: 화면중간 이미지, 이미지 상에 텍스트 -->
@@ -111,7 +125,7 @@
         <!-- 3번 섹션: 컨텐츠: 화면 중간에 6개 박스 -->
         <section id="content">
             <div class="content_wrap">
-                <h2>CONTENT</h2>
+                <h2>STORIES & NEWS</h2>
                 <div class="content_pic">
                     <div class="one">
                         <a href="https://www.twosome.co.kr:7009/store/storeView.asp?sort_store=988" target="_blank" class="hvr-underline-from-center">경주 보문점</a>
@@ -167,7 +181,9 @@
                     </div>
                 </div>
             </div>
-            <div class="f_right"></div>
+            <div class="f_right">
+                <div class="f_right-wrap"></div>
+            </div>
         </section>
         <!-- 5번 섹션: SNS: 인스트 사진 4장, 인스타연결, 하단에 푸터 -->
         <section id="sns">
@@ -175,15 +191,31 @@
                 <h2># a twosome place</h2>
                 <div class="s_logo">
                     <img src="images/section005_logo_30x30.png" alt="인스타로고">
-                    <a href="https://www.instagram.com/atwosomeplace_official/">
+                    <a href="https://www.instagram.com/atwosomeplace_official/" target="_blank">
                         atwosomeplace_official
                     </a>
                 </div>
                 <div class="sns_pic">
-                    <div class="pic_box"></div>
-                    <div class="pic_box"></div>
-                    <div class="pic_box"></div>
-                    <div class="pic_box"></div>
+                    <div class="pic_box">
+                        <a href="https://www.instagram.com/atwosomeplace_official/" target="_blank">
+                            <img src="images/section005_content01.jpg" alt="sns1">
+                        </a>
+                    </div>
+                    <div class="pic_box">
+                        <a href="https://www.instagram.com/atwosomeplace_official/" target="_blank">
+                            <img src="images/section005_content02.jpg" alt="sns2">
+                        </a>
+                    </div>
+                    <div class="pic_box">
+                        <a href="https://www.instagram.com/atwosomeplace_official/" target="_blank">
+                            <img src="images/section005_content03.jpg" alt="sns3">
+                        </a>
+                    </div>
+                    <div class="pic_box">
+                        <a href="https://www.instagram.com/atwosomeplace_official/" target="_blank">
+                            <img src="images/section005_content04.jpg" alt="sns4">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer">
