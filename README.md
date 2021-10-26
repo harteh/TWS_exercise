@@ -1,4 +1,4 @@
 # TWS_exercise
-투썸 연습
+- A Twosome place page
 
 https://harteh.github.io/TWS_exercise/
